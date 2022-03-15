@@ -99,7 +99,7 @@
   max-width: 40vw;
   max-height: 75vh;
 }
-.container-left a video {
+.carousel-button {
   color: white;
   background-color: #00afcb;
   border-radius: 3px;
@@ -135,6 +135,7 @@
   background-size: 26px 20px;
   opacity: 0.6;
   transform: translateY(-50%);
+  background-color: rgb(82, 124, 133);
 }
 
 .maincarousel-control > .arrow:hover {
@@ -164,12 +165,12 @@
   width: 10px;
   height: 10px;
   cursor: pointer;
-  border: 1px solid #ffffff;
+  border: 1px solid black;
   border-radius: 10px;
 }
 
 .maincarousel-indicators li.active {
-  background-color: #ffffff;
+  background-color: #00b7ce;
 }
 
 @media (min-width: 992px) {
