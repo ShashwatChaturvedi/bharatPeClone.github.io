@@ -1,0 +1,92 @@
+.carousel {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+}
+.slider {
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.slider::before,
+.slider::after {
+  background-color: white;
+  content: "";
+  height: 100px;
+  position: absolute;
+  z-index: 2;
+}
+.slider::before {
+  top: 0;
+  left: 0;
+}
+.slider::after {
+  top: 0;
+  right: 0;
+  transform: rotateZ(180deg);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translateX(calc(-150px * 7));
+  }
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translateX(calc(-150px * 7));
+  }
+}
+
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+  animation: scroll 20s linear infinite;
+  display: flex;
+  width: calc(150px * 14);
+}
+
+.slider .slide {
+  height: 180px;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide img {
+  height: 30px;
+  margin: 0px 40px;
+  filter: saturate(0);
+  transition: 0.3s;
+}
+
+.slide img:hover {
+  filter: saturate(1);
+}
+
+/* Style the navbar */
+.topnav {
+  overflow: hidden;
+  background-color: white;
+}
+
+/* Navbar links */
+.topnav {
+  display: flex;
+  justify-content: space-around;
+  align-items: right;
+  color: white;
+  text-align: right;
+}
