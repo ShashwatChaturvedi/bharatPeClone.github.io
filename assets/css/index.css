@@ -1,9 +1,15 @@
+@import url("http://fonts.cdnfonts.com/css/itc-avant-garde-pro-md");
+
+body {
+  margin: 0;
+}
 .carousel {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   height: fit-content;
+  margin-top: 10px;
 }
 .slider {
   height: auto;
@@ -86,7 +92,45 @@
 .topnav {
   display: flex;
   justify-content: space-around;
-  align-items: right;
+  align-items: center;
   color: white;
-  text-align: right;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+  width: 100vw;
+  border: solid rgb(221, 220, 220);
+  border-width: 0 0 2px 0;
+  margin-bottom: 10px;
+  font-family: "ITC Avant Garde Pro Md", sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  margin-right: 15px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.nav-login {
+  color: white;
+  background-color: #00afcb;
+  border-radius: 3px;
+  border-style: none;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.nav-links a:hover {
+  color: #11b4ce;
 }

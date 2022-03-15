@@ -1,0 +1,204 @@
+@import url("http://fonts.cdnfonts.com/css/itc-avant-garde-pro-md");
+
+.maincarousel {
+  position: relative;
+  width: 100%;
+  padding: 90px 0;
+  text-align: center;
+  background-color: white;
+  height: 75vh;
+  font-family: "ITC Avant Garde Pro Md", sans-serif;
+}
+
+.maincarousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.maincarousel-inner > .item {
+  position: relative;
+  display: none;
+  animation: 0.5s ease-in-out;
+}
+
+.maincarousel-inner > .active,
+.maincarousel-inner > .next {
+  display: block;
+}
+
+.maincarousel-inner > .next {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.maincarousel-inner > .to-left {
+  animation-name: left;
+}
+
+.maincarousel-inner > .from-right {
+  animation-name: right;
+}
+
+.maincarousel-inner > .to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.maincarousel-inner > .from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: left;
+}
+.container-left {
+  padding-top: 30px;
+  flex-basis: 50%;
+  height: 100%;
+  min-height: 74vh;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: left;
+}
+.container-left .text {
+  font-size: 3.5vw;
+  font-weight: 900;
+  text-align: left !important;
+}
+
+.container-left .textsmall {
+  font-size: 1.8vw;
+}
+.container-left a img {
+  max-height: 10vh;
+  min-height: 10vh;
+  margin-right: 20px;
+}
+
+.download {
+  display: flex;
+  justify-content: start;
+}
+.container-right {
+  flex-basis: 50%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.container img {
+  max-width: 40vw;
+  max-height: 75vh;
+}
+.container-left a video {
+  color: white;
+  background-color: #00afcb;
+  border-radius: 3px;
+  border-style: none;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.maincarousel-control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15%;
+  cursor: pointer;
+}
+
+.maincarousel-control.right {
+  right: 0;
+  left: auto;
+}
+
+.maincarousel-control > .arrow {
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyNiAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+QXJyb3c8L3RpdGxlPjxwYXRoIGQ9Ik0yNS42IDEwLjk3NGwtOC41MyA4LjYyYTEuMzYgMS4zNiAwIDAgMS0xLjkzNS4wMDMgMS4zODcgMS4zODcgMCAwIDEtLjAwMi0xLjk1bDYuMjAxLTYuMjY4SDEuMzY4QTEuMzc0IDEuMzc0IDAgMCAxIDAgMTBjMC0uNzYyLjYxMy0xLjM4IDEuMzY4LTEuMzhoMTkuOTY2bC02LjItNi4yNjdhMS4zODcgMS4zODcgMCAwIDEgLjAwMS0xLjk1IDEuMzYgMS4zNiAwIDAgMSAxLjkzNi4wMDJsOC41MyA4LjYyMWMuNTMyLjUzOC41MzIgMS40MSAwIDEuOTQ4IiBmaWxsPSIjRkZGRkZGIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=")
+    center center no-repeat;
+  background-size: 26px 20px;
+  opacity: 0.6;
+  transform: translateY(-50%);
+}
+
+.maincarousel-control > .arrow:hover {
+  opacity: 0.8;
+}
+
+.maincarousel-control > .arrow.left {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.maincarousel-control > .arrow.right {
+  right: 50%;
+}
+
+.maincarousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  padding-left: 0;
+  margin: 0;
+  /* list-style: none; */
+  transform: translateX(-50%);
+}
+
+.maincarousel-indicators li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+}
+
+.maincarousel-indicators li.active {
+  background-color: #ffffff;
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
